@@ -1,5 +1,10 @@
-string dockingCode = "West";
-string instruction = "";
+
+
+string instruction = string.Empty;
+
+
+Console.WriteLine("Enter dockingCode  :  NORTH EAST SERVICE CLOSED");
+string dockingCode = Console.ReadLine()?.Trim().ToUpper();
 
 // TODO: Bruk switch statement til å sette instruction.
 
@@ -8,28 +13,29 @@ switch (dockingCode)
 
 
     case "NORTH":
-        Console.WriteLine("Dock at gate 1");
+
+        instruction = "Dock at gate 1";
 
         break;
 
     case "EAST":
 
-        Console.WriteLine("Dock at gate 2");
+        instruction = "Dock at gate 2";
         break;
 
     case "SERVICE":
 
-        Console.WriteLine("Dock at maintenance bay");
+        instruction = "Dock at maintenance bay";
         break;
 
     case "CLOSED":
 
-        Console.WriteLine("Hold position");
+        instruction = "Hold position";
         break;
 
     default:
 
-        Console.WriteLine(" Unknown docking code");
+        instruction = " Unknown docking code";
         break;
 
 
@@ -38,6 +44,9 @@ switch (dockingCode)
 
 }
 
+Console.WriteLine(instruction);
 
 
-Console.WriteLine(dockingCode);
+
+
+

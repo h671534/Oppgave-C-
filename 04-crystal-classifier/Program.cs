@@ -1,7 +1,11 @@
-int energy = 99;
-string classification = "";
+// int energy = 99;
+string classification = string.Empty;
 
 // TODO: Sett classification med if / else if / else.
+
+Console.WriteLine("Enter energiverdien :");
+int energy = int.Parse(Console.ReadLine());
+
 
 if (energy < 20)
 {
@@ -20,12 +24,15 @@ else if (energy >= 50 && energy <= 79)
     classification = "Unstable";
 
 }
-else if (energy >= 80)
+
+else
 {
+
 
     classification = "Critical";
 
 
 }
+;
 
-Console.WriteLine($"Classification: {classification}");
+Console.WriteLine($"Classification er : {classification}");

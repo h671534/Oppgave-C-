@@ -1,32 +1,47 @@
-string signal = "Adelm";
+// string signal = "Adelm";
+string svar = string.Empty;
 
 
 // TODO: Lag switch med kombinerte case-labels.
 
-switch(signal){
+Console.WriteLine("Enter nødpanel signalene : ");
+string signal = Console.ReadLine()?.Trim().ToUpper();
 
-case "CRIMSON" or "RED" or "SCARLET":
 
-  Console.WriteLine("Evacuate deck");
-  break;
 
-  case "AMBER" or  "YELLOW":
-  
-   Console.WriteLine("Prepare crew");
-   break;
+switch (signal)
+{
+
+
+  case "CRIMSON":
+  case "SCARLET":
+  case "RED":
+
+
+    svar = "Evacuate deck";
+    break;
+
+  case "AMBER":
+  case "YELLOW":
+
+    svar = "Prepare crew";
+    break;
 
   case "GREEN":
 
-    Console.WriteLine("No emergency");
+    svar = "No emergency";
     break;
 
-    default:
-     Console.WriteLine("Unknown signal");
-     break;
-
-
-
+  default:
+    svar = "Unknown signal";
+    break;
 
 
 
 }
+
+Console.WriteLine(svar);
+
+
+
+
